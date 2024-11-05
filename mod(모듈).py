@@ -189,7 +189,24 @@ sys.path
 
 sys.path.append를 사용해서 C:/doit/mymod라는 디렉터리를 sys.path에 추가했다. 그리고 다시 sys.path를 출력해 보니 가장 마지막에 C:/doit/mymod 디렉터리가 추가되었다.
 
+import mod2
+print(mod2.add(3,4))
+7
 
+PYTHONPATH 환경 변수 사용하기
+
+모듈을 불러와서 사용하는 또 다른 방법으로는 PYTHONPATH 환경 변수를 사용하는 것이 있다.
+
+다음과 같이 따라 해 보자.
+
+C:\doit>set PYTHONPATH=C:\doit\mymod
+C:\doit>python
+>>> import mod_2
+>>> print(mod_2.int(3, 4))
+7
+set 명령어를 사용해 PYTHONPATH 환경 변수에 mod_2.py 파일이 있는 C:\doit\mymod 디렉터리를 설정한다. 그러면 디렉터리 이동이나 별도의 모듈 추가 작업 없이 mymod 디렉터리에 저장된 mod_2 모듈을 불러와서 사용할 수 있다.
+
+맥이나 유닉스 환경에서는 set 대신 export 명령을 사용해야 한다
 
 
 
